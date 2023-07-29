@@ -255,7 +255,7 @@ const forgotPassword = asyncHandler(async (req, res) => {
   }).save();
 
   // Construct Reset Url
-  const resetUrl = `http://localhost:3000/resetpassword/${resetToken}`;
+  const resetUrl = `http://89.116.179.77:3000/resetpassword/${resetToken}`;
 
   // Reset Email
   const message = `
