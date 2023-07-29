@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BACKEND_URL = "http://localhost:5000";
+const BACKEND_URL = "http://localhost:6000";
 
 const API_URL = `${BACKEND_URL}/api/products/`;
 
