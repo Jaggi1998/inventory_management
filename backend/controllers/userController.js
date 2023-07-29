@@ -8,7 +8,7 @@ const sendEmail = require("../utils/sendEmail");
 
 // Generate Token
 const generateToken = (id) => {
-  return jwt.sign({ id }, "process.env.JWT_SECRET", { expiresIn: "1d" });
+  return jwt.sign({ id }, "Son@*912!@93#!@ASDjn", { expiresIn: "1d" });
 };
 
 // Register User
@@ -159,7 +159,7 @@ const loginStatus = asyncHandler(async (req, res) => {
     return res.json(false);
   }
   // Verify Token
-  const verified = jwt.verify(token, "process.env.JWT_SECRET");
+  const verified = jwt.verify(token, "Son@*912!@93#!@ASDjn");
   if (verified) {
     return res.json(true);
   }
