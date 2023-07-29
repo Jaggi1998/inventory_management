@@ -39,7 +39,7 @@ app.get("/", (req, res) => {
 // Error Middleware
 app.use(errorHandler);
 // Connect to DB and start server
-const PORT = process.env.PORT || 6000;
+const PORT = process.env.PORT || 8000;
 mongoose
   .connect('mongodb://0.0.0.0:27017/Inventory')
   .then(() => {
