@@ -8,7 +8,7 @@ const sendEmail = require("../utils/sendEmail");
 
 // Generate Token
 const generateToken = (id) => {
-  return jwt.sign({ id }, "Son@*912!@93#!@ASDjn", { expiresIn: '21h' });
+  return jwt.sign({ id }, "Son@*912!@93#!@ASDjn", { expiresIn: '1d' });
 };
 
 // Register User
@@ -49,7 +49,6 @@ const registerUser = asyncHandler(async (req, res) => {
     httpOnly: true,
     expires: new Date(Date.now() + 1000 * 86400), // 1 day
     sameSite: "none",
-    secure: true,
   });
 
   if (user) {
@@ -100,7 +99,6 @@ const loginUser = asyncHandler(async (req, res) => {
     httpOnly: true,
     expires: new Date(Date.now() + 1000 * 86400), // 1 day
     sameSite: "none",
-    secure: true,
   });
 }
   if (user && passwordIsCorrect) {
@@ -127,7 +125,6 @@ const logout = asyncHandler(async (req, res) => {
     httpOnly: true,
     expires: new Date(0),
     sameSite: "none",
-    secure: true,
   });
   return res.status(200).json({ message: "Successfully Logged Out" });
 });
